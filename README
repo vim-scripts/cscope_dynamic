@@ -1,0 +1,7 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=5098
+
+cscope_dynamic is a VIM plugin that enables very fast cscope database updates for C/C++ codebases. It accomplishes this by using two cscope databases; a large one, and a small one. When a file is written it is moved to the small database, which can update in a matter of seconds - often sub-second. The file is then removed from the large database to avoid duplicate updates. Subsequent writes to the same file only trigger a small database update. The initial move from the large to small database is a one time cost. This works well because you're often only modifying a subset of files at a time.
+
+See bitbucket for more information and current development[1]. 
+
+[1] https://bitbucket.org/ericgarver/cscope_dynamic/wiki/Home
